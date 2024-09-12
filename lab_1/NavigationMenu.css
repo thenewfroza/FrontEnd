@@ -2,13 +2,14 @@
     display: flex;
     flex-wrap: nowrap;
 }
+
 .mainMenuItem{
     margin-left: auto;
     margin-right: auto;
     display: flex;
     flex-wrap: nowrap;
-
 }
+
 .header{
     margin-left: auto;
     margin-right: auto;
@@ -16,6 +17,7 @@
     border: 2px solid darkblue;
     height: 66.65px;
 }
+
 .topSegment{
     display: flex;
     flex-wrap: nowrap;
