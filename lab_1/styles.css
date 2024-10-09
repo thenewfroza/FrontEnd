@@ -23,12 +23,14 @@ body {
     src: url("./fonts/WaterBrush-Regular.ttf") format("opentype");
 }
 
-
 .navbar {
     display: flex;
     justify-content: space-between;
     background-color: #333;
     padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .navbar__menu {
@@ -140,6 +142,7 @@ body {
     font-size: 50px;
     font-family: 'Water Brush', cursive;
     text-align: right;
+    word-wrap: break-word;
 }
 
 .quote__part2 {
@@ -147,6 +150,7 @@ body {
     margin-top: 10%;
     align-self: flex-end;
     text-align: center;
+    word-wrap: break-word;
 }
 
 .highlight {
@@ -233,6 +237,7 @@ body {
 .collections__content__left {
     flex: 1 1 auto;
 }
+
 .collections__content__right {
     flex: 1 1 auto;
 }
