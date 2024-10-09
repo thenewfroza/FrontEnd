@@ -66,7 +66,12 @@ body {
     background-repeat: no-repeat, no-repeat;
     display: flex;
     justify-content: space-between;
+    width: 100%;
     padding: 0;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
 }
 
 .section__left__content {
@@ -115,6 +120,7 @@ body {
     text-align: left;
     margin-top: 55%;
     margin-left: 45%;
+
 }
 
 .section__quote {
@@ -163,9 +169,17 @@ body {
 
 .collections {
     background-image: url("ImgSourse/collections/fone.png");
-    background-repeat: no-repeat;
     width: 100%;
+    background-repeat: no-repeat;
     height: 1248px;
+}
+
+.collections__content__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
     position: relative;
 }
 
@@ -267,7 +281,7 @@ body {
 .collections__button {
     position: absolute;
     bottom: 10%;
-    right: 28%;
+    right: 21%;
     height: 100px;
 }
 
