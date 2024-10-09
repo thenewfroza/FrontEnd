@@ -1,4 +1,4 @@
 # FrontEnd
 lab 1
 made by Sergei Krivuliak M3313
-![img.png](img.png)
+![img.png](lab_1/img.png)

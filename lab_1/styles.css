@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+@font-face {
+    font-family: Maghfirea;
+    src: url("./fonts/Maghfirea.woff") format("opentype");
+}
+
+@font-face {
+    font-family: Bastro;
+    src: url("./fonts/Bastro.woff") format("opentype");
+}
+
+@font-face {
+    font-family: "Water Brush";
+    src: url("./fonts/WaterBrush-Regular.ttf") format("opentype");
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.navbar__menu {
+    display: flex;
+    list-style: none;
+}
+
+.navbar__menu li {
+    margin-right: 20px;
+}
+
+.navbar__menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar__icons a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar__icons i {
+    margin-right: 5px;
+}
+
+.container {
+    background-image: url("ImgSourse/container/fon.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat, no-repeat;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.section__left__content {
+    background-image: url("ImgSourse/container/left_section/fon.png");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat, no-repeat;
+    flex: 1;
+    padding: 20px;
+    width: 50%;
+    height: 930px;;
+    margin: 0;
+
+    text-align: center;
+}
+
+.section__right_content {
+    background-image: url("ImgSourse/container/right_section/fon.png");
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    flex: 1;
+    width: 50%;
+    height: 930px;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+}
+
+.section__title {
+    color: #fff;
+    font-size: 140px;
+    font-weight: 400;
+    line-height: 222px;
+    text-align: left;
+    margin-bottom: 10px;
+    font-family: Bastro, sans-serif;
+}
+
+.section__content aside {
+    color: #ffffff;
+    font-family: 'Maghfirea', serif;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 65px;
+    text-align: left;
+    margin-top: 55%;
+    margin-left: 45%;
+
+}
+
+.section__quote {
+    color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: 'Bastro', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 65px;
+    text-align: right;
+
+}
+
+.quote__part1 {
+    font-size: 50px;
+    font-family: 'Water Brush', cursive;
+    text-align: right;
+}
+
+.quote__part2 {
+    margin-left: 100px;
+    margin-top: 10%;
+    align-self: flex-end;
+    text-align: center;
+}
+
+.highlight {
+    font-family: 'Bastro', sans-serif;
+}
+
+.highlight-noise {
+    font-family: 'Maghfirea', cursive;
+}
+
+.container_button {
+    margin-top: 15%;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid orange;
+}
+
+.collections {
+    background-image: url("ImgSourse/collections/fone.png");
+    margin-left: auto;
+    margin-right: auto;
+    width: 1646px;
+    height: 1248px;
+    top: 966px;
+}
+
+.collections__content {
+    background-image: url("ImgSourse/collections/collectuins__content/fone.png");
+    background-size: cover;
+    background-position: center;
+    border: 2px black solid;
+    box-shadow: 0 4px 170px -26px #CFD6E294;
+    margin: 8% auto 15%;
+    width: 1132px;
+    height: 550px;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer__contacts, .footer__payment {
+    margin: 10px 0;
+}
