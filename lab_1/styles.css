@@ -70,6 +70,7 @@ body {
     justify-content: space-between;
     width: 100%;
     padding: 0;
+    margin-top: 25px;
 
     @media screen and (max-width: 768px) {
         flex-direction: column;
@@ -146,8 +147,6 @@ body {
 }
 
 .quote__part2 {
-    margin-left: 100px;
-    margin-top: 10%;
     align-self: flex-end;
     text-align: center;
     word-wrap: break-word;
