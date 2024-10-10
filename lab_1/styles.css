@@ -166,6 +166,7 @@ body {
 
 .collections {
     background-image: url("ImgSourse/collections/fone.png");
+    background-size: contain;
     width: 100%;
     background-repeat: no-repeat;
     height: 1248px;
@@ -175,9 +176,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
     height: 100%;
     position: relative;
+}
+
+.collections__content {
+    background-color: white;
+    background-image: url("ImgSourse/collections/collectuins__content/fone.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    border: 2px orange solid;
+    display: flex;
+    box-shadow: 0 4px 170px -26px #CFD6E294;
+    width: 75%;
+    height: 500px;
 }
 
 .collections h2 {
@@ -188,7 +201,7 @@ body {
     text-align: left;
     position: absolute;
     bottom: 27.5%;
-    right: 25.5%;
+    right: 16.5%;
     color: black;
     z-index: 1;
 }
@@ -201,30 +214,10 @@ body {
     line-height: 45px;
     width: 15%;
     bottom: 18%;
-    right: 23.5%;
+    right: 17%;
     word-wrap: break-word;
     color: black;
     z-index: 1;
-}
-
-.collections__content__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.collections__content {
-    background-color: white;
-    background-image: url("ImgSourse/collections/collectuins__content/fone.png");
-    background-size: cover;
-    background-position: center;
-    border-radius: 12px;
-    border: 2px orange solid;
-    display: flex;
-    box-shadow: 0 4px 170px -26px #CFD6E294;
-    width: 50%;
-    height: 500px;
 }
 
 .collections__content__left {
@@ -252,7 +245,7 @@ body {
     font-weight: 400;
     line-height: 104px;
     text-align: left;
-    margin-top: 38%;
+    margin-top: 32%;
     margin-left: 44%;
 }
 
@@ -279,7 +272,7 @@ body {
 .collections__button {
     position: absolute;
     bottom: 10%;
-    right: 21%;
+    right: 15%;
     height: 100px;
 }
 
@@ -298,6 +291,37 @@ body {
     font-weight: 400;
     line-height: 81px;
     text-align: left;
+}
+
+.new__albums {
+    display: flex;
+    overflow-x: scroll;
+    width: 100%;
+    padding: 20px 0;
+    box-sizing: border-box;
+    border: 1px solid orange;
+}
+
+.new__albums a {
+    margin: 0 10px;
+}
+
+.new__albums img {
+    height: 150px;
+    width: auto;
+    display: block;
+}
+
+.new__albums h2 {
+    border: 2px black solid;
+    text-align: center;
+    font-family: 'Maghfirea', serif;
+    margin-bottom: 10px;
+}
+
+.album {
+    flex-direction: row;
+    border: 2px cyan solid;
 }
 
 .footer {
