@@ -141,6 +141,7 @@ body {
 .quote__part1 {
     font-size: 3rem;
     font-family: 'Water Brush', cursive;
+    font-style: italic;
     text-align: right;
     word-wrap: break-word;
 }
@@ -153,6 +154,7 @@ body {
 
 .highlight {
     font-family: 'Bastro', sans-serif;
+    font-style: normal;
 }
 
 .highlight-noise {
