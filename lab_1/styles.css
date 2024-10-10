@@ -29,6 +29,7 @@ body {
     background-color: #333;
     padding: 10px 20px;
     position: fixed;
+    z-index: 2;
     top: 0;
     width: 100%;
 }
@@ -62,10 +63,6 @@ body {
 }
 
 .container {
-    background-image: url("ImgSourse/container/fon.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat, no-repeat;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -84,10 +81,8 @@ body {
     background-repeat: no-repeat, no-repeat;
     flex: 1;
     padding: 20px;
-    width: 50%;
-    height: 930px;;
+    height: 930px;
     margin: 0;
-
     text-align: center;
 }
 
@@ -97,7 +92,6 @@ body {
     background-position: left;
     background-repeat: no-repeat;
     flex: 1;
-    width: 50%;
     height: 930px;
     padding: 20px;
     margin: 0;
