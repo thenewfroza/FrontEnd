@@ -74,7 +74,7 @@ body {
     padding: 0;
     margin-top: 25px;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1300px) {
         flex-direction: column;
     }
 }
@@ -101,6 +101,10 @@ body {
     padding: 20px;
     margin: 0;
     text-align: center;
+}
+
+.section__right_content h1 {
+    width: 10%;
 }
 
 .section__title {
@@ -198,6 +202,7 @@ body {
     box-shadow: 0 4px 170px -26px #CFD6E294;
     width: 75%;
     height: 500px;
+    overflow: hidden;
 }
 
 .collections h2 {
@@ -219,11 +224,10 @@ body {
     font-size: 2.25rem;
     font-weight: 400;
     line-height: 2.8rem;
-    width: 15%;
-    bottom: 18%;
+    bottom: 20%;
     right: 17%;
     word-wrap: break-word;
-    color: black;
+    color: coral;
     z-index: 1;
 }
 
@@ -232,6 +236,7 @@ body {
 }
 
 .collections__content__right {
+    overflow: hidden;
     flex: 1 1 auto;
 }
 
@@ -254,6 +259,7 @@ body {
     text-align: left;
     margin-top: 32%;
     margin-left: 44%;
+
 }
 
 .collection__column {
@@ -326,6 +332,43 @@ body {
     margin-bottom: 10px;
 }
 
+.table-example {
+    position: relative;
+    align-content: center;
+    text-align: center;
+    margin: 40px 10px 60px;
+    max-width: 100%;
+}
+
+.table-info {
+    width: 100%;
+    border-collapse: collapse;
+    color: #333333;
+}
+
+th, td {
+    border: 2px solid #333333;
+    padding: 8px;
+    text-align: center;
+}
+
+
+th:nth-child(1), td:nth-child(1) {
+    width: 30%;
+}
+
+th:nth-child(2), td:nth-child(2) {
+    width: 30%;
+}
+
+th:nth-child(3), td:nth-child(3) {
+    width: 40%;
+}
+
+.table-info tr:nth-child(odd) {
+    background-color: cadetblue;
+}
+
 .album {
     flex-direction: row;
     border: 2px cyan solid;
@@ -336,6 +379,10 @@ body {
     color: #fff;
     padding: 20px;
     text-align: center;
+
+    @media screen and (max-width: 1600px) {
+        display: none;
+    }
 }
 
 .footer__contacts, .footer__payment {
