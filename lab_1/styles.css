@@ -103,17 +103,14 @@ body {
     text-align: center;
 }
 
-.section__right_content h1 {
-    width: 10%;
-}
-
 .section__title {
+    display: flex;
+    word-break: break-all;
     color: #fff;
     font-size: 8.75rem;
     font-weight: 400;
     line-height: 13.875rem;
     text-align: left;
-    margin-bottom: 10px;
     font-family: Bastro, sans-serif;
 }
 
@@ -344,6 +341,13 @@ body {
     width: 100%;
     border-collapse: collapse;
     color: #333333;
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+}
+
+.table-info thead,
+.table-info tbody, .table-info tr {
+    display: contents;
 }
 
 th, td {
@@ -352,20 +356,7 @@ th, td {
     text-align: center;
 }
 
-
-th:nth-child(1), td:nth-child(1) {
-    width: 30%;
-}
-
-th:nth-child(2), td:nth-child(2) {
-    width: 30%;
-}
-
-th:nth-child(3), td:nth-child(3) {
-    width: 40%;
-}
-
-.table-info tr:nth-child(odd) {
+.table-info tr:nth-child(even) td{
     background-color: cadetblue;
 }
 
