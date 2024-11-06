@@ -14,17 +14,17 @@ body {
 
 @font-face {
     font-family: Maghfirea;
-    src: url("./fonts/Maghfirea.otf") format("opentype");
+    src: url("fontsaghfirea.otf") format("opentype");
 }
 
 @font-face {
     font-family: Bastro;
-    src: url("./fonts/Bastro.otf") format("opentype");
+    src: url("fontsastro.otf") format("opentype");
 }
 
 @font-face {
     font-family: "Water Brush";
-    src: url("./fonts/WaterBrush-Regular.ttf") format("opentype");
+    src: url("fontsaterBrush-Regular.ttf") format("opentype");
 }
 
 .navbar {
@@ -378,4 +378,19 @@ th, td {
 
 .footer__contacts, .footer__payment {
     margin: 10px 0;
+}
+
+.navbar__menu li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+}
+
+.navbar__menu li a.active {
+    background-color: orange;
+    color: white;
+}
+
+.navbar__menu li a:hover {
+    background-color: black;
 }
