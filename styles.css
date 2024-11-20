@@ -14,17 +14,17 @@ body {
 
 @font-face {
     font-family: Maghfirea;
-    src: url("fontsaghfirea.otf") format("opentype");
+    src: url("/fonts/Maghfirea.otf") format("opentype");
 }
 
 @font-face {
     font-family: Bastro;
-    src: url("fontsastro.otf") format("opentype");
+    src: url("fonts/Bastro.otf") format("opentype");
 }
 
 @font-face {
     font-family: "Water Brush";
-    src: url("fontsaterBrush-Regular.ttf") format("opentype");
+    src: url("fonts/WaterBrush-Regular.ttf") format("opentype");
 }
 
 .navbar {
