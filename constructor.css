@@ -1,0 +1,87 @@
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+main {
+    margin: 70px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: calc(100% - 100px);
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#filters {
+    margin-bottom: 20px;
+}
+
+#filters button {
+    margin-right: 10px;
+    background-color: #6c757d;
+}
+
+#filters button.active {
+    background-color: #007bff;
+}
+
+#taskList {
+    margin-top: 20px;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.task.done {
+    background-color: #d4edda;
+    text-decoration: line-through;
+    color: #155724;
+}
+
+.task.in-progress {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.task.todo {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.task button {
+    background-color: #dc3545;
+}
+
+.task button:hover {
+    background-color: #c82333;
+}

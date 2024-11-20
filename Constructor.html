@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="constructor.css">
+    <script src="script.js" defer></script>
+    <script src="constructorScript.js" defer></script>
+    <title>Constructor</title>
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <ul class="navbar__menu">
+            <li><a href="Collections.html">Collections</a></li>
+            <li><a href="Constructor.html">Constructor</a></li>
+            <li><a href="vinylShop.html">Home</a></li>
+        </ul>
+        <div class="navbar__icons">
+            <a href="#"><i class="icon-search"></i></a>
+            <a href="#"><i class="icon-heart"></i></a>
+            <a href="#"><i class="icon-user"></i></a>
+            <a href="CardPage.html"><i class="icon-cart"></i> CART (1)</a>
+        </div>
+    </nav>
+</header>
+<main>
+    <section>
+        <h1>Constructor</h1>
+        <form id="constructorForm">
+            <label>
+                <input type="text" id="inputText" placeholder="Enter task" required>
+            </label>
+            <button type="submit">
+                Add
+            </button>
+        </form>
+
+        <div id="filters">
+            <button data-filter="all">
+                All
+            </button>
+            <button data-filter="todo">
+                ToDo
+            </button>
+            <button data-filter="in-progress">
+                In progress
+            </button>
+            <button data-filter="done">
+                Done
+            </button>
+        </div>
+
+        <div id="taskList"></div>
+
+    </section>
+</main>
+
+<footer class="footer">
+    <p id = "load-time"></p>
+    <div class="footer__contacts">Contacts</div>
+    <div class="footer__payment">Shipping & payment</div>
+</footer>
+</body>
+</html>
