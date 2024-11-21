@@ -1,12 +1,12 @@
 (function() {
     if (window.PerformanceObserver) {
-        const observer = new PerformanceObserver((list) => {
-            list.getEntriesByType('navigation').forEach((entry) => {
-                const loadTime = entry.domContentLoadedEventEnd - entry.startTime;
-                document.getElementById('load-time').textContent = 'Page load time is ' + (loadTime / 1000).toFixed(2) + ' seconds.';
-            });
-        });
 
+        const observer = new PerformanceObserver((list) => {
+               const [temp] = list.getEntriesByType('navigation')
+                const loadTime = temp.domContentLoadedEventEnd - temp.startTime;
+                document.getElementById('load-time').textContent = 'Page load time is '
+                    + (loadTime / 1000).toFixed(2) + ' seconds'
+        });
         observer.observe({ type: 'navigation', buffered: true });
     }
 
