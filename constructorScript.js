@@ -3,42 +3,41 @@ document.addEventListener("DOMContentLoaded", () => {
     const taskInput = document.getElementById("inputText");
     const taskList = document.getElementById("taskList");
     const filters = document.getElementById("filters");
+    const taskTemplate = document.getElementById("taskTemplate");
 
     let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
     let filter = "all";
 
+    // Функция для отрисовки задач
     const renderTasks = () => {
         taskList.innerHTML = "";
 
         tasks
             .filter(task => filter === "all" || task.status === filter)
             .forEach(task => {
-                const taskDiv = document.createElement("div");
-                taskDiv.className = `task ${task.status}`;
-                taskDiv.innerHTML = `
-                    <span>${task.text}</span>
-                    <div>
-                        <select class="change-status">
-                            <option value="todo" ${task.status === "todo" ? "selected" : ""}>to do</option>
-                            <option value="in-progress" ${task.status === "in-progress" ? "selected" : ""}>In progress</option>
-                            <option value="done" ${task.status === "done" ? "selected" : ""}>Done</option>
-                        </select>
-                        <button class="delete-task">Удалить</button>
-                    </div>
-                `;
-                taskList.appendChild(taskDiv);
+                const taskDiv = taskTemplate.content.cloneNode(true);
+                const taskText = taskDiv.querySelector(".task-text");
+                const selectStatus = taskDiv.querySelector(".change-status");
+                const deleteButton = taskDiv.querySelector(".delete-task");
 
-                taskDiv.querySelector(".change-status").addEventListener("change", (event) => {
+                taskText.textContent = task.text;
+                selectStatus.value = task.status;
+
+                taskDiv.querySelector(".task").classList.add(task.status);
+
+                selectStatus.addEventListener("change", (event) => {
                     task.status = event.target.value;
                     saveTasks();
-                    renderTasks()
+                    renderTasks();
                 });
 
-                taskDiv.querySelector(".delete-task").addEventListener("click", () => {
+                deleteButton.addEventListener("click", () => {
                     tasks = tasks.filter(t => t !== task);
                     saveTasks();
-                    renderTasks()
+                    renderTasks();
                 });
+
+                taskList.appendChild(taskDiv);
             });
     };
 
@@ -62,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
             filter = event.target.getAttribute("data-filter");
             document.querySelectorAll("#filters button").forEach(button => button.classList.remove("active"));
             event.target.classList.add("active");
-            renderTasks()
+            renderTasks();
         }
     });
 

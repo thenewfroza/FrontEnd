@@ -56,7 +56,19 @@
 
     </section>
 </main>
-
+<template id="taskTemplate">
+    <div class="task">
+        <span class="task-text"></span>
+        <div>
+            <select class="change-status">
+                <option value="todo">to do</option>
+                <option value="in-progress">In progress</option>
+                <option value="done">Done</option>
+            </select>
+            <button class="delete-task">Удалить</button>
+        </div>
+    </div>
+</template>
 <footer class="footer">
     <p id = "load-time"></p>
     <div class="footer__contacts">Contacts</div>
