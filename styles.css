@@ -356,7 +356,7 @@ th, td {
     text-align: center;
 }
 
-.table-info tr:nth-child(even) td{
+.table-info tr:nth-child(even) td {
     background-color: cadetblue;
 }
 
@@ -393,4 +393,42 @@ th, td {
 
 .navbar__menu li a:hover {
     background-color: black;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.preloader {
+    border: 8px solid #f3f3f3; /* Серый фон */
+    border-top: 8px solid #3498db; /* Синий цвет */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+#album-container.loading #preloader {
+    display: block;
+}
+
+.album {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+}
+
+.album img {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.album h2 {
+    font-size: 1rem;
+    text-align: center;
 }
