@@ -44,10 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
             let albums = await response.json();
             container.classList.remove('loading');
 
-            // Фильтруем альбомы по случайному диапазону ID
             albums = albums.filter(album => album.id >= minId && album.id <= maxId);
 
-            renderAlbums(albums.slice(0, 5)); // Отображаем первые 20 альбомов после фильтрации
+            renderAlbums(albums.slice(0, 7));
         } catch (error) {
             container.classList.remove('loading');
             container.innerHTML = '<p>⚠ Что-то пошло не так</p>';
@@ -56,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const renderAlbums = (albums) => {
-        container.innerHTML = ''; // Очищаем контейнер
+        container.innerHTML = '';
         albums.forEach(album => {
             const albumElement = document.createElement('div');
             albumElement.classList.add('album');
@@ -65,12 +64,12 @@ document.addEventListener('DOMContentLoaded', () => {
             img.src = album.thumbnailUrl;
             img.alt = album.title;
 
-            // Обработчик загрузки изображения
+            
             img.onload = () => {
-                preloaderElement.style.display = 'none'; // Прячем прелоадер после загрузки
+                preloaderElement.style.display = 'none'; 
             };
 
-            // Обработчик ошибки загрузки изображения
+            
             img.onerror = () => {
                 preloaderElement.style.display = 'none';
                 const errorMessage = document.createElement('div');
@@ -90,5 +89,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setTimeout(() => {
         fetchAlbums();
-    }, 3000);  // Вызов функции
+    }, 3000);
 });
