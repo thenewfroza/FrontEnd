@@ -27,26 +27,32 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('album-container');
-    let lastFetched = 0; // Переменная для отслеживания последнего фильтра
+    const loadMoreButton = document.createElement('button');
+    loadMoreButton.innerText = 'Загрузить еще';
+
+    let lastFetched = 0;
+    let allAlbums = [];
 
     const getRandomFilter = () => {
-        // Генерируем случайное значение (1 или 2)
         const random = Math.random() < 0.5 ? 1 : 2;
         return random === 1 ? { minId: 1, maxId: 5 } : { minId: 6, maxId: 10 };
     };
 
-    const fetchAlbums = async () => {
+    const fetchAlbums = async (limit = 5) => {
         try {
             container.classList.add('loading');
             const { minId, maxId } = getRandomFilter();
-            const response = await fetch('https://jsonplaceholder.typicode.com/photos');
+            const response = await fetch('https://jsonplaceholder.typicode.com/albums/1/photos');
             if (!response.ok) throw new Error('Network response was not ok');
             let albums = await response.json();
             container.classList.remove('loading');
 
             albums = albums.filter(album => album.id >= minId && album.id <= maxId);
 
+            allAlbums = allAlbums.concat(albums.slice(lastFetched, lastFetched + limit));
+            lastFetched += limit;
             renderAlbums(albums.slice(0, 7));
+
         } catch (error) {
             container.classList.remove('loading');
             container.innerHTML = '<p>⚠ Что-то пошло не так</p>';
@@ -55,7 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const renderAlbums = (albums) => {
-        container.innerHTML = '';
         albums.forEach(album => {
             const albumElement = document.createElement('div');
             albumElement.classList.add('album');
@@ -64,12 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
             img.src = album.thumbnailUrl;
             img.alt = album.title;
 
-            
+
             img.onload = () => {
-                preloaderElement.style.display = 'none'; 
+                preloaderElement.style.display = 'none';
             };
 
-            
+
             img.onerror = () => {
                 preloaderElement.style.display = 'none';
                 const errorMessage = document.createElement('div');
@@ -84,10 +89,18 @@ document.addEventListener('DOMContentLoaded', () => {
             albumElement.appendChild(titleElement);
             albumElement.appendChild(img);
             container.appendChild(albumElement);
+
         });
+        if (!container.contains(loadMoreButton)) {
+            container.appendChild(loadMoreButton);
+        }
     };
 
+    loadMoreButton.addEventListener('click', () => {
+        fetchAlbums(5); // Загрузить 5 новых фото
+    });
+
     setTimeout(() => {
-        fetchAlbums();
+        fetchAlbums(5);
     }, 3000);
 });
