@@ -1,0 +1,15 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "lab 1\r made by Sergei Krivuliak M3313\r ![img.png](img.png)",
+  "main": "constructorScript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "headroom.js": "^0.12.0"
+  }
+}
